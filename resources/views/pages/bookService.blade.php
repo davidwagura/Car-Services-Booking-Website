@@ -41,6 +41,9 @@
       h1 {
         text-align: center;
       }
+      label {
+        margin-bottom: 0px;
+      }
       
     </style>l
     <h1><u>Please fill the form below</u></h1>   
@@ -54,9 +57,11 @@
         <option value="engine">Engine Diagnosis</option>
         <option value="wheel">Tire Rotation</option>
         <option value="breaks">Break Inspection</option>
-        </select><br>  
+        </select><br> 
+        <section>
         <label for= "description">please describe the car's condition:</label> <br>
         <textarea name="description" id="car-details"></textarea>
+        </section> 
         <section>
         <button>submit</button>
         </section>
