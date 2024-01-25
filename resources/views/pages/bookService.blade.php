@@ -16,35 +16,36 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        float: center;
-        display: block;
+        align: center;
+        
       }
-      select {
-        padding: auto;
-        margin:10px 10px 10px 10px;
-        padding: 15px 32px; 
-
-      }
+  
       textarea {
         height: 7rem;
         margin:10px 10px 10px 10px;
       }
+
       button {
         text-align: center;
         margin:10px 10px 10px 10px;
         padding: 15px 32px;
 
       }
-      input {
-        margin:10px 10px 10px 10px;
-        padding: 15px 32px; 
+    
+      .input {
+        display: grid;
+        grid-template-columns: repeat(auto-fit);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
       }
+      h1 {
+        text-align: center;
+      }
+      
     </style>
-      <h1>Please fill the form below</h1>   
-       
+    <h1>Please fill the form below</h1>   
+    <div class="input">
         <label for="name">fullname:</label>
         <input type="text"><br>
         <label for="services">select service:</label>
@@ -60,6 +61,6 @@
         <section>
         <button>submit</button>
         </section>
-
+    </div>
     </body>
 </html>
