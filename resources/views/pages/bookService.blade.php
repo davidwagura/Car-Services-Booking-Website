@@ -17,12 +17,11 @@
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         align: center;
-        
       }
   
       textarea {
         height: 7rem;
-        margin:10px 10px 10px 10px;
+        border-radius: 20px;
       }
 
       button {
@@ -43,8 +42,8 @@
         text-align: center;
       }
       
-    </style>
-    <h1>Please fill the form below</h1>   
+    </style>l
+    <h1><u>Please fill the form below</u></h1>   
     <div class="input">
         <label for="name">fullname:</label>
         <input type="text"><br>
