@@ -10,8 +10,8 @@ class PagesController extends Controller
         return view('pages.index');  
     }
 
-    public function about(){
-        return view('pages.about');
+    public function bookService(){
+        return view('pages.bookService');
     }
 
     public function services(){

@@ -66,10 +66,18 @@
             bottom: 0;
             width: 100%;
         }
+        button {
+           left: 20px;
+          height: 4rem;
+
+        }
     </style>
     <header>
         <h1>Car Service Station</h1>
     </header>
+    <button type="button" onclick="window.location='{{ route("bookService", ["data" => "value"]) }}'">Book Service</button>
+
+
 
     <section>
         <div class="service-card">
