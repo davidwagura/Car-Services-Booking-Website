@@ -10,3 +10,7 @@ use App\Http\Controllers\ServiceController;
 Route::get('/register', [ServiceController::class, 'registrationPage']);
 
 Route::post('/registration', [ServiceController::class, 'register'])->name('register');
+
+Route::get('/login', [ServiceController::class, 'loginPage']);
+
+Route::post('/login', [ServiceController::class, 'login'])->name('login');
