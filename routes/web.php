@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ServiceController;
 
-Route::get('/index', [PagesController::class, 'index']);
 
-Route::get('/bookSevice', [PagesController::class, 'bookService']) ->name('bookService');
+// Route::get('/', [ServiceController::class, 'bookService']);
+// Route::post('/service',     [ServiceController::class, 'push'])->name('service');
 
-Route::get('/services', [PagesController::class, 'services']);
+Route::get('/register', [ServiceController::class, 'registrationPage']);
+
+Route::post('/registration', [ServiceController::class, 'register'])->name('register');
