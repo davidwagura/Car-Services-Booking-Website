@@ -24,6 +24,10 @@ class User extends Authenticatable
         'car_registration_number'
     ];
 
+    public function service()
+    {
+        return $this->hasMany(Service::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

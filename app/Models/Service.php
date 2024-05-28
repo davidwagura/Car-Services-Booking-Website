@@ -10,4 +10,15 @@ class Service extends Model
     use HasFactory;
 
     protected $table = 'service';
+
+    protected $fillable = [
+
+        'service'
+        
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

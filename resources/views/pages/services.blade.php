@@ -1,112 +1,107 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<html lang="en">
+
     <head>
+
         <meta charset="utf-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{config('app.name', 'LSAP')}}</title>
+        <title>Services</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     </head>
-    <body> 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
+    <body class="bg-gray-100 font-sans">
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+        <header class="bg-gray-800 text-white p-4 text-center">
 
-        .service-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 20px;
-            width: calc(50% - 20px);
-            box-sizing: border-box;
-        }
+            <h1 class="text-2xl">Car Service Station</h1>
 
-        .service-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
+        </header>
 
-        h2 {
-            color: #333;
-        }
+        <section class="max-w-4xl mx-auto my-8 flex flex-wrap justify-between">
 
-        p {
-            color: #666;
-        }
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        button {
-           left: 20px;
-          height: 4rem;
+                <img src="{{ asset('oil-to-car-engine') }}" alt="Oil Change" class="w-full h-auto rounded mb-4">
 
-        }
-    </style>
-    <header>
-        <h1>Car Service Station</h1>
-    </header>
-    <button type="button" onclick="window.location='{{ route("bookService", ["data" => "value"]) }}'">Book Service</button>
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Oil Change</h2>
 
+                <p class="text-gray-600">We provide quick and efficient oil change services using high-quality oils and filters.</p>
 
+            </div>
 
-    <section>
-        <div class="service-card">
-        <img src="{{ asset('oil-to-car-engine') }}" alt="oil change">
-            <h2>Oil Change</h2>
-            <p>We provide quick and efficient oil change services using high-quality oils and filters.</p>
-        </div>
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
 
-        <div class="service-card">
-            <img src= "{{ asset('wheel-service.webp') }}" alt="Tire Rotation Service">
-            <h2>Tire Rotation</h2>
-            <p>Extend the life of your tires with our professional tire rotation service.</p>
-        </div>
+                <img src="{{ asset('wheel-service.webp') }}" alt="Tire Rotation Service" class="w-full h-auto rounded mb-4">
 
-        <div class="service-card">
-            <img src="{{ asset('inspection') }}" alt="Brake Inspection Service">
-            <h2>Brake Inspection</h2>
-            <p>Ensure your safety with our thorough brake inspection services, identifying and addressing potential issues.</p>
-        </div>
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Tire Rotation</h2>
 
-        <div class="service-card">
-            <img src="{{ asset('auto-repair-shop') }}" alt="Engine Diagnosis Service">
-            <h2>Engine Diagnosis</h2>
-            <p>Our advanced diagnostic tools help identify and solve engine-related problems efficiently.</p>
-        </div>
-    </section>
+                <p class="text-gray-600">Extend the life of your tires with our professional tire rotation service.</p>
 
-    <footer>
-        <p>&copy; 2024 Your Car Service Station</p>
-    </footer> 
-  </body>
+            </div>
+
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
+
+                <img src="{{ asset('inspection') }}" alt="Brake Inspection Service" class="w-full h-auto rounded mb-4">
+
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Brake Inspection</h2>
+
+                <p class="text-gray-600">Ensure your safety with our thorough brake inspection services, identifying and addressing potential issues.</p>
+
+            </div>
+
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
+
+                <img src="{{ asset('auto-repair-shop') }}" alt="Engine Diagnosis Service" class="w-full h-auto rounded mb-4">
+
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Engine Diagnosis</h2>
+
+                <p class="text-gray-600">Our advanced diagnostic tools help identify and solve engine-related problems efficiently.</p>
+
+            </div>
+
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
+
+                <img src="{{ asset('battery-service') }}" alt="Battery Replacement Service" class="w-full h-auto rounded mb-4">
+
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Battery Replacement</h2>
+
+                <p class="text-gray-600">Get your car battery replaced quickly and efficiently by our expert technicians.</p>
+
+            </div>
+
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
+
+                <img src="{{ asset('car-wash') }}" alt="Car Wash Service" class="w-full h-auto rounded mb-4">
+
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">Car Wash</h2>
+
+                <p class="text-gray-600">Keep your car looking new with our comprehensive car wash services.</p>
+
+            </div>
+
+            <div class="service-card bg-white border border-gray-300 rounded-lg shadow-lg m-4 p-6 w-full sm:w-1/2">
+
+                <img src="{{ asset('ac-service') }}" alt="AC Service" class="w-full h-auto rounded mb-4">
+
+                <h2 class="text-gray-800 text-xl font-semibold mb-2">AC Service</h2>
+
+                <p class="text-gray-600">Stay cool with our thorough air conditioning system maintenance and repair services.</p>
+
+            </div>
+
+        </section>
+
+        <footer class="bg-gray-800 text-white text-center p-4 fixed bottom-0 w-full">
+
+            <p>&copy; 2024 Your Car Service Station</p>
+
+        </footer>
+
+    </body>
+    
 </html>

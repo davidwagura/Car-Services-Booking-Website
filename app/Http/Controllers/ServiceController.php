@@ -13,12 +13,9 @@ class ServiceController extends Controller
     // }
 
     // public function bookService(){
-    //     return view('pages.book_service');
-    // }
-
-    // public function services(){
     //     return view('pages.services');
     // }
+
 
     public function registrationPage()
     {
@@ -81,13 +78,17 @@ class ServiceController extends Controller
         return 'User not found.';
 
     }
-    // public function login(Request $request)
-    // {
-    //   $user = User::  
-    // }
 
-    // public function data(){
-    //     return Service::all();
-    // }
+    public function services(){
+        
+        return view('pages.services');
+
+    }
+
+    public function userService(){
+
+        $user = User::where('user_id', $user_id)
+    }
+
 
 }
